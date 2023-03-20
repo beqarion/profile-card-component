@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Profile card component</title>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- normalize -->
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="./css/main.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-  Victor Crest
-  26
-  London
 
-  80K
-  Followers
+  <main class="main">
+    <article class="profile-card">
+      <!-- img -->
+      <div class="profile-img-container">
+        <img src="./images/image-victor.jpg" alt="" class="profile-img">
+      </div>
+      <!-- info -->
+      <div class="profile-info">
+        <div class="personal-info">
+          <h1 class="name">Victor Crest</h1>
+          <span class="age">26</span>
+          <p class="city">London</p>
+        </div>
+        <div class="stats">
+          <!-- single stat -->
+          <h2 class="stat-num">80K</h2>
+          <p class="stat-type">Followers</p>
+          <!-- end of single stat -->
+          <!-- single stat -->
+          <h2 class="stat-num">803K</h2>
+          <p class="stat-type">Likes</p>
+          <!-- end of single stat -->
+          <!-- single stat -->
+          <h2 class="stat-num">1.4K</h2>
+          <p class="stat-type">Photos</p>
+          <!-- end of single stat -->
+        </div>
+      </div>
+    </article>
+  </main>
 
-  803K
-  Likes
-
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
+
 </html>
