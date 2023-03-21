@@ -36,15 +36,31 @@ p {
 }
 
 .main {
-  background: var(--dark-cyan);
+  /* bg for mobile */
+  background: url("../images/bg-pattern-top.svg") top -355px left -410px / 622px
+      621px no-repeat,
+    url("../images/bg-pattern-bottom.svg") top 356px left 165px / 622px 621px
+      no-repeat,
+    no-repeat var(--dark-cyan);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 @media screen and (min-width: 300px) and (max-width: 600px) {
   .main {
     padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* bg for desktop */
+  .main {
+    background: url("../images/bg-pattern-top.svg") top -509px left -285px /
+        978px 976px no-repeat,
+      url("../images/bg-pattern-bottom.svg") top 375px left 693px / 978px 976px
+        no-repeat,
+      no-repeat var(--dark-cyan);
   }
 }
 
@@ -52,7 +68,8 @@ p {
   width: 100%;
   max-width: 350px;
   background: white;
-  border-radius: 25px;
+  box-shadow: 0px 50px 100px rgba(8, 70, 94, 0.504835);
+  border-radius: 15px;
 }
 
 /* profile picture */
@@ -70,4 +87,81 @@ p {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+}
+
+/* profile info */
+
+.personal-info {
+  margin-bottom: 1.75rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "name age"
+    "city city";
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 13px 8.5px;
+}
+.name {
+  grid-area: "name";
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+.age {
+  grid-area: "age";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--dark-grayish-blue);
+}
+.city {
+  grid-area: "city";
+  grid-column: 1 / -1;
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* horizon line */
+.horizon-line {
+  height: 1px;
+  background: #e8e9ec;
+}
+
+/* stats */
+.stats {
+  display: flex;
+  max-width: 233px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  justify-content: space-between;
+}
+@media screen and (min-width: 300px) {
+  .stats {
+    max-width: 250px;
+  }
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+.stat-num {
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+.stat-type {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 1.5px;
 }
